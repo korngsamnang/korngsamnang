@@ -1,0 +1,33 @@
+name: Update chat SVG
+
+on:
+  schedule:
+  - cron: "0 4 * * *"
+  workflow_dispatch:
+
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Build chat.svg
+      run: node build-svg.js
+
+    - name: Commit updated chat.svg
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: GitHub Actions
+        author_email: actions@github.com
+        message: "Auto-update chat.svg"
+        add: "chat.svg"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
