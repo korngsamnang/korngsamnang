@@ -2,7 +2,7 @@ name: Update chat SVG
 
 on:
   schedule:
-  - cron: "*/5 * * * *"
+  - cron: "0 4 * * *"
   workflow_dispatch:
 
 
