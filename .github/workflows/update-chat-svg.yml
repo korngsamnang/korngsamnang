@@ -15,15 +15,14 @@ jobs:
 
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
-        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v3
       with:
-        node-version: 20
-        cache: 'npm'
+        node-version: 18
 
     - name: Build chat.svg
       run: node build-svg.js
@@ -31,7 +30,7 @@ jobs:
     - name: Commit updated chat.svg
       uses: EndBug/add-and-commit@v9
       with:
-        author_name: "Korng Samnang"
+        author_name: Korng Samnang
         author_email: ${{ secrets.MY_GITHUB_EMAIL }}
         message: "Auto-update chat.svg - $(date -u +'%Y-%m-%d %H:%M')"
         add: "chat.svg"
