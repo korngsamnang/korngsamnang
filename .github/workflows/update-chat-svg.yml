@@ -27,12 +27,16 @@ jobs:
     - name: Build chat.svg
       run: node build-svg.js
 
+    - name: Set current date in Bangkok time
+      id: date
+      run: echo "DATE=$(TZ='Asia/Bangkok' date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+
     - name: Commit updated chat.svg
       uses: EndBug/add-and-commit@v9
       with:
         author_name: Korng Samnang
         author_email: ${{ secrets.MY_GITHUB_EMAIL }}
-        message: "Auto-update chat.svg - $(date -u +'%Y-%m-%d %H:%M')"
+        message: "Auto-update chat.svg - ${{ env.DATE }}"
         add: "chat.svg"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
