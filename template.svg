@@ -345,8 +345,8 @@
   </g>
 
    <g transform="translate(10, 240)" class="msg-5">
-    <rect width="270" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Thank you for visiting me 🙏</text>
+    <rect width="220" height="42" rx="18.0355" class="bubble" />
+    <text x="15" y="27">Thanks for visiting! 🙏</text>
   </g>
 
   <!-- typing 6 -->
@@ -369,6 +369,6 @@
 
   <g transform="translate(10, 288)" class="msg-6">
     <rect width="{dayBubbleWidth}" height="42" rx="18.0355" class="bubble" />
-    <text x="15" y="27">Have a nice {todayDay} <tspan class="emoji">😊</tspan></text>  
+    <text x="15" y="27">Have a nice {todayDay}! <tspan class="emoji">😊</tspan></text>  
   </g>
 </svg>
