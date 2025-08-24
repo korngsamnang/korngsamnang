@@ -29,7 +29,7 @@ jobs:
 
     - name: Set current date in Bangkok time
       id: date
-      run: echo "DATE=$(TZ='Asia/Bangkok' date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+      run: echo "DATE=$(TZ=Asia/Bangkok date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
 
     - name: Commit updated chat.svg
       uses: EndBug/add-and-commit@v9
