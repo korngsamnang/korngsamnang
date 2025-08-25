@@ -32,11 +32,11 @@ jobs:
       run: echo "DATE=$(TZ=Asia/Bangkok date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
 
     - name: Commit updated chat.svg
-      uses: EndBug/add-and-commit@v9
-      with:
-        author_name: Korng Samnang
-        author_email: ${{ secrets.MY_GITHUB_EMAIL }}
-        message: "Auto-update chat.svg - ${{ env.DATE }}"
-        add: "chat.svg"
+      run: |
+        git config --global user.name "Korng Samnang"
+        git config --global user.email "${{ secrets.MY_GITHUB_EMAIL }}"
+        git add chat.svg
+        git commit -m "Auto-update chat.svg - $DATE" --date="$(TZ=Asia/Bangkok date)"
+        git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
