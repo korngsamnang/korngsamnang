@@ -1,3 +1,3 @@
 ## About Me
 
-[<img src="chat.svg" />](https://www.linkedin.com/in/korngsamnang/)
+[<img src="chat.svg" />](https://www.korngsamnang.me/)
