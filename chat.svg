@@ -273,8 +273,8 @@
 
   <g transform="translate(10, 48)" class="msg-2">
     <rect width="470" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="30">I work in Full-stack development and DevOps at Skills </text>
-    <text x="15" y="50">Development Fund Cambodia.</text>
+    <text x="15" y="30">I build and deploy software and manage infrastructure </text>
+    <text x="15" y="50">at the SDF Cambodia.</text>
   </g>
 
   <!-- typing 3 -->
@@ -320,10 +320,10 @@
   </g>
 
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="430" height="42" rx="18.0355" class="bubble" />
+    <rect width="380" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
-      You can find me on LinkedIn at
-      <a xlink:href="https://www.linkedin.com/in/korngsamnang">in/korngsamnang</a>
+      You can see my work at
+      <a xlink:href="https://www.korngsamnang.me">korngsamnang.me</a>
     </text>
   </g>
 
